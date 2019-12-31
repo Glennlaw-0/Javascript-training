@@ -1,0 +1,25 @@
+body {
+  background: #eee;
+}
+
+form {
+  max-width: 200px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 10px;
+}
+
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 4px;
+}
+
+.success {
+  border: 2px solid greenyellow;
+  background-color: greenyellow;
+}
+
+.danger {
+  border: 2px solid red;
+}
