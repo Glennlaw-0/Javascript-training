@@ -30,12 +30,20 @@ list.addEventListener('click', e => {
   }
 });
 
+//filter todos
+//Example of array methods and array method chainging
 const filterTodos = term => {
-  console.log(Array.from(list.children));
+  Array.from(list.children)
+    .filter(todo => !todo.textContent.toLowerCase().includes(term))
+    .forEach(todo => todo.classList.add('filtered'));
+
+  Array.from(list.children)
+    .filter(todo => todo.textContent.toLowerCase().includes(term))
+    .forEach(todo => todo.classList.remove('filtered'));
 };
 
 //keyup event
-search.addEventListern('keyup', () => {
-  const term = search.value.trim();
+search.addEventListener('keyup', () => {
+  const term = search.value.trim().toLowerCase();
   filterTodos(term);
 });
