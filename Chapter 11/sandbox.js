@@ -46,3 +46,8 @@ const hours = Math.round(mins / 60);
 const days = Math.round(hours / 24);
 
 console.log(days);
+console.log(`this blog was written ${days} ago`);
+
+// converting timestamps into date objects
+const timeStamp = 1675938474990;
+console.log(new Date(timeStamp));
